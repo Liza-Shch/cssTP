@@ -1,0 +1,265 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+.container-shadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 50%, 1);
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 3fr 18fr 3fr;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-content: stretch;
+    align-content: stretch;
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    overflow-y: auto;
+    margin: 0;
+    max-width: 600px;
+    min-width: 400px;
+    border-radius: 5px;
+    border: 1px solid gold;
+    background-color: white;
+    box-shadow:   1px 12px 20px 2px rgba(50, 50, 50, 0.76);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 999;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr 1fr 2fr;
+    grid-row-gap: 20px;
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: center;
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-text {
+    font-size: 100%;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.input-password, .input-text{
+    border-radius: 5px;
+    border: 1px solid rgb(167, 167, 167);
+    padding-right: 20px;
+    height: 40px;
+}
+
+.input-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-text-password {
+    width: 85%;
+    height: 100%;
+    font-size: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: relative;
+    left: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.custom-checkbox {
+    width: 10px;
+    height: 10px;
+    border: 2px solid gold;
+    border-radius: 3px;
+}
+
+.remember-password {
+    margin-left: 5%;
+}
+
+.checkbox-label input {
+    display: none;
+}
+.checkbox-label input:checked ~ .custom-checkbox {
+    background-color: gold;
+}
+
+.custom-checkbox::after {
+    content: "";
+    display: none;
+}
+
+.checkbox-label input:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+.custom-checkbox::after {
+    margin-left: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.forget-password {
+    text-decoration: none;
+    color: rgb(54, 90, 189);
+}
+
+.forget-password:hover {
+    text-decoration: underline;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.login-button {
+    text-decoration: none;
+    width: 35%;
+    margin: 0 auto;
+    padding: 2.5%;
+    background-color: gold;
+    border: 1px solid gold;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+}
+
+.login-button:hover {
+    background-color: rgb(255, 208, 0);
+}
+
+.social-links {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+.text-small {
+    color: rgb(167, 167, 167);
+    margin: 0;
+}
+
+.button-area {
+    height: 100%;
+    min-height: 50px;
+}
+
+.button {
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(54, 90, 189);
+    height: 100%;
+    border-top: 1px solid  rgb(167, 167, 167);
+}
+
+.button:hover {
+    background-color: gold;
+    color: white;
+    border: 0;
+}
+
+.social-links-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    border-radius: 5px;
+}
+.vk {
+    background-color: #306096;
+}
+
+.fb {
+    background-color: #3b5998;
+}
+
+.ok {
+    background-color: #F2720C;
+}
+
+.social-icon > svg {
+    filter: invert(100%);
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .container {
+        width: 100%;
+        height: 100%;
+        min-width: 256px;
+        grid-template-rows: 1fr 5fr 1fr;
+        grid-row-gap: 80px;
+    }
+
+    .input-text-password {
+        width: 80%;
+    }
+
+    .login-button {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 350px), (orientation: landscape) and (max-width: 736px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        min-width: 256px;
+        grid-template-rows: 1fr 6fr 1fr;
+        grid-row-gap: 5px;
+    }
+}

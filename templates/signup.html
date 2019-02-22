@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/signup.css" media="all" type="text/css" />
+    <title>Регистрация</title>
+</head>
+<body> 
+    <main class="container">
+        <header class="header">
+            <h1>Регистрация</h1>
+        </header> 
+        <form class="form-container">
+            <span class="msg">
+                Для регистрации на ресурсе укажите информацию о себе
+            </span>
+            <div class="input-item">
+                <input type="text" class="input-text error" id="name" placeholder="Имя">
+                <label for="name" class="error-msg">Заполните обязательное поле</label> 
+            </div> 
+            <div class="input-item">
+                <input type="text" class="input-text" id="surname" placeholder="Фамилия">
+            </div>
+            <label for="birthday" class="title-item"><b>Дата рождения</b></label>
+            <div class="input-item-birthday" id="birthday">
+                <span class="custom-dropdown">
+                    <select name="day">
+                        <option value="hide">День</option>
+                    </select>
+                </span>
+                <span class="custom-dropdown">
+                    <select name="mounth">
+                        <option value="hide">Месяц</option>
+                    </select>
+                </span>
+                <span class="custom-dropdown">
+                    <select name="year">
+                        <option value="hide">Год</option>
+                    </select>
+                </span>
+            </div>
+            <label for="mobile" class="title-item"><b>Телефон</b></label>
+            <div class="input-item-mobile">
+                <a class="custom-dropdown custom-dropdown-img">
+                    <span>
+                        <img src="https://img.imgsmail.ru/mail/ru/images/country_icons/ru.png">
+                        <span class="option-text">Россия</span>
+                    </span>
+                </a>
+                <span class="input-text"></span>
+            </div>
+            <div class="input-item">
+                <input type="password" class="input-text" id="password" placeholder="Пароль">
+            </div>
+            <div class="input-item">
+                <input type="password" class="input-text" id="repeat-password" placeholder="Повторите пароль">
+            </div>
+        </form>
+        <footer class="button-container">
+            <a class="button button-registrate" href="#">Зарегистрироваться</a>
+            <a class="button button-cancel" href="#">Отменить</a>
+        </footer> 
+    </main>
+</body>
+</html>
